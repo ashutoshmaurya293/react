@@ -7,7 +7,6 @@ function App() {
   let [counter, setcounter] = useState(0)
   let addvalue = ()=> {
     counter = counter + 1
-    // console.log(counter);
     setcounter(counter)
 }
 let removeValue = ()=> {
