@@ -13,6 +13,7 @@ function App() {
 let removeValue = ()=> {
   if(counter <= 0){
     alert("Your Counter value is 0")
+    console.log("kdlafoaf");
 }else{
   counter = counter - 1
   // console.log(counter);
