@@ -7,7 +7,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setpassword] = useState("");
 
-  const passwordref = useRef(null)
+  const passwordRef = useRef(null)
 
   const paswardGenerater = useCallback(() => {
     let pas = "";
@@ -20,7 +20,11 @@ function App() {
     }
     setpassword(pas)
   }, [length, numberAllowed, charAllowed]);
+  const copyPasswardToClipboard = useCallback(()=> {
+    window.navigator.clipboard.writeText(password)
+  }, [password])
 useEffect(()=>{paswardGenerater()}, [length, numberAllowed, charAllowed, paswardGenerater])
+
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-white text-center my-3">Password generator</h1>
@@ -31,10 +35,11 @@ useEffect(()=>{paswardGenerater()}, [length, numberAllowed, charAllowed, pasward
           className="outline-none w-full py-1 px-3"
           placeholder="Password"
           readOnly
-          ref={}
+          ref={passwordRef}
         />
         <button
           className="outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0"
+          onClick={copyPasswardToClipboard}
         >
           copy
         </button>
