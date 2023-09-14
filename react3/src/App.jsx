@@ -1,5 +1,4 @@
-import { useCallback, useState, useEffect, useRef} from "react";
-
+import { useCallback, useState, useEffect, useRef } from "react";
 
 function App() {
   const [length, setlength] = useState(8);
@@ -7,7 +6,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setpassword] = useState("");
 
-  const passwordRef = useRef(null)
+  const passwordRef = useRef(null);
 
   const paswardGenerater = useCallback(() => {
     let pas = "";
@@ -18,18 +17,20 @@ function App() {
       let Char = Math.floor(Math.random() * string.length + 1);
       pas += string.charAt(Char);
     }
-    setpassword(pas)
+    setpassword(pas);
   }, [length, numberAllowed, charAllowed]);
-  const copyPasswardToClipboard = useCallback(()=> {
-    window.navigator.clipboard.writeText(password)
-  }, [password])
-useEffect(()=>{paswardGenerater()}, [length, numberAllowed, charAllowed, paswardGenerater])
+  const copyPasswardToClipboard = useCallback(() => {
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
+  useEffect(() => {
+    paswardGenerater();
+  }, [length, numberAllowed, charAllowed, paswardGenerater]);
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
       <h1 className="text-white text-center my-3">Password generator</h1>
       <div className="flex shadow rounded-lg overflow-hidden mb-4">
-        <input 
+        <input
           type="text"
           value={password}
           className="outline-none w-full py-1 px-3"
