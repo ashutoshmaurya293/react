@@ -44,13 +44,6 @@ function Login() {
                 for="remember"
                 className="inline-flex items-center text-gray-600"
               >
-                <input
-                  type="checkbox"
-                  id="remember"
-                  name="remember"
-                  className="text-blue-500"
-                />
-                <span className="ml-2">Remember me</span>
               </label>
             </div>
             <div className="flex items-center justify-between">
