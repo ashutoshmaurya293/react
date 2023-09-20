@@ -1,14 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Card from './card/Card'
+import Grid from './Grid/Grid'
 
 function App() {
 
   return (
     <>
-  <Card player="cross"/>
+<Grid numberOfCards={9} />
     </>
   )
 }

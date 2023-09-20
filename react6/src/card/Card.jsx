@@ -1,17 +1,17 @@
-import Icon from "../icon/Icon"
-
-function Card({player}) {
-    let icon = <Icon/>
-    if(player == "X"){
-        icon = <Icon name= "cross" />
-    }else if(player == "O"){
-        icon = <Icon name= "circle"/>
-    }
+import Icon from "../icon/Icon";
+import "./Card.css";
+function Card({ player }) {
+  let icon = <Icon />;
+  if (player == "X") {
+    icon = <Icon name="cross" />;
+  } else if (player == "O") {
+    icon = <Icon name="circle" />;
+  }
   return (
-  <>
-   {icon}
-   </>
-  )
+      <div className="card">
+         {icon}
+        </div>
+  );
 }
 
-export default Card
+export default Card;
