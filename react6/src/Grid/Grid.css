@@ -1,3 +1,6 @@
+body{
+    background-color: black;
+}
 .grid{
     height: 500px;
     width: 500px;
@@ -5,4 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+}
+.turn-highlight{
+    color: white;
 }
