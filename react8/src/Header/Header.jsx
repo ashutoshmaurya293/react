@@ -8,7 +8,8 @@ function Header() {
         <h2>LOGO</h2>
         <NavLink to={'/'}><button>Home</button></NavLink>
         <NavLink to={'/card'}><button>add</button></NavLink>
-        <button>Login</button>
+        <NavLink to={'/login'}> <button>Login</button></NavLink>
+       
         
     </div>
   )

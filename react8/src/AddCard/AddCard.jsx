@@ -10,7 +10,7 @@ function AddCard({updateData,preData}) {
     })
     const submit = ()=>{
       updateData([cardData,...preData])
-      console.log(cardData);
+      console.log(cardData,...preData);
 }
   return (
     <div className='form'>

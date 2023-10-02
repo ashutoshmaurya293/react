@@ -3,6 +3,7 @@ import { Route, Router, Routes } from "react-router-dom";
 
 import AddCard from "../AddCard/AddCard";
 import Home from "../Home/Home";
+import Login from "../Login/Login";
 
 
 function Allroute() {
@@ -23,6 +24,7 @@ function Allroute() {
       <Routes>
         <Route path="/" element={<Home cardData={cardData}/>} />
         <Route path="/card" element={<AddCard preData={cardData} updateData={setcardData}/>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

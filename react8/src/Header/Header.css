@@ -5,7 +5,7 @@
 
 .header{
     display: flex;
-justify-content: space-between;
+justify-content: space-around;
 
 }
 .header h2,button{
