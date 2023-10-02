@@ -2,7 +2,7 @@ import React from "react";
 import './Card.css'
 
 function Card(prop) {
-    const {img,tytle,disc} = prop
+    const {img,tytle,desc} = prop
   return (
     <div className="note">
       <img
@@ -11,7 +11,7 @@ function Card(prop) {
       />
       <h3>{tytle}</h3>
       <p>
-      {disc}
+      {desc}
       </p>
       <button>red</button>
       <button>edit</button>
