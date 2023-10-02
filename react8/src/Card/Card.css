@@ -1,0 +1,10 @@
+.note{
+    height: 400px;
+    width: 300px;
+    margin: 30px;
+    /* background-color: red; */
+}
+.note img{
+    height: 50%;
+    width: 90%;
+}
