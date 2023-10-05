@@ -1,16 +1,18 @@
 import React, { useState } from 'react'
 import './AddCard.css'
-import { NavLink } from 'react-router-dom'
+import { NavLink, json } from 'react-router-dom'
 
-function AddCard({updateData,preData}) {
+function AddCard({updateData,preData=[]}) {
     const [cardData,setcardData] = useState({
         title:"",
         img:"",
         desc:""
     })
     const submit = ()=>{
+      const newData = [cardData,...preData]
       updateData([cardData,...preData])
       console.log(cardData,...preData);
+      localStorage.setItem("cardData",JSON.stringify(newData))
 }
   return (
     <div className='form'>

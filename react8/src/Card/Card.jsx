@@ -3,17 +3,18 @@ import "./Card.css";
 import { NavLink } from "react-router-dom";
 
 function Card(prop) {
-  const { img, tytle, desc, id, setcardData, cardData } = prop;
+  const { img, title, desc, id, setcardData, cardData } = prop;
   const remove = () => {
     const newArr = cardData.filter((e, i) => id !== i);
     console.log(newArr);
     console.log(id);
     setcardData([...newArr]);
+    localStorage.setItem("cardData",JSON.stringify(newArr))
   };
   return (
     <div className="note">
       <img src={img} alt="" />
-      <h3>{tytle}</h3>
+      <h3>{title}</h3>
       <p>{desc}</p>
       <NavLink to={`/red/${id}`}>
         <button>red</button>
