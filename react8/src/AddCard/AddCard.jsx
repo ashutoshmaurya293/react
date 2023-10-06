@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './AddCard.css'
-import { NavLink, json } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function AddCard({updateData,preData=[]}) {
     const [cardData,setcardData] = useState({
