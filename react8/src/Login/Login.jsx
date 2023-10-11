@@ -5,7 +5,7 @@ function Login() {
   return (
     <div className="login-container">
       <h2>Login</h2>
-      <form>
+      <form onSubmit={(e)=>e.preventDefault()}>
         <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input type="text" id="username" name="username" />
