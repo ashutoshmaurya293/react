@@ -1,19 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-import ImageData from './Image/ImageData'
+import { useState } from "react";
+import "./App.css";
+import Routet from "./Route/Routet";
 
 function App() {
-  const [singlePhoto, setsinglePhoto] = useState([])
-  const single = () => {
- 
-}
 
   return (
-    <>
-    <h1>hellow</h1>
-     <ImageData single={single}/>
-    </>
-  )
+ <Routet/>
+  );
 }
 
-export default App
+export default App;

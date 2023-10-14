@@ -3,8 +3,9 @@ import axios from "axios";
 import ImgCard from "../Components/ImgCard";
 import './Img.css'
 
-function ImageData({single}) {
+function ImageData() {
   const [Image, setImage] = useState([]);
+  const [singleig, setsingleig] = useState([])
   const [isLoading, setIsLoading] = useState(false);
   const getImg = async () => {
     setIsLoading(true);
@@ -28,7 +29,7 @@ function ImageData({single}) {
           ? "Loading... "
           : Image.map((elm, i) => {
               return (
-                <ImgCard id={elm.id} imageUrl={elm.download_url} key={i} elm={elm}/>
+                <ImgCard id={elm.id} imageUrl={elm.download_url} key={i} elm={elm} setsingleig={setsingleig} singleig={singleig}/>
               );
             })}
       </div>
