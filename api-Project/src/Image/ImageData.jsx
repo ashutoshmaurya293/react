@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "./Image.css";
+import ImgCard from "../Components/ImgCard";
+import './Img.css'
 
-function ImageData() {
+function ImageData({single}) {
   const [Image, setImage] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const getImg = async () => {
@@ -27,14 +28,7 @@ function ImageData() {
           ? "Loading... "
           : Image.map((elm, i) => {
               return (
-                <img
-                  key={i}
-                  src={elm.download_url}
-                  height={400}
-                  width={300}
-                  className="image"
-                  alt=""
-                />
+                <ImgCard id={elm.id} imageUrl={elm.download_url} key={i} elm={elm}/>
               );
             })}
       </div>

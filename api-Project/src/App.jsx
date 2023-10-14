@@ -3,12 +3,15 @@ import './App.css'
 import ImageData from './Image/ImageData'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [singlePhoto, setsinglePhoto] = useState([])
+  const single = () => {
+ 
+}
 
   return (
     <>
     <h1>hellow</h1>
-     <ImageData/>
+     <ImageData single={single}/>
     </>
   )
 }
