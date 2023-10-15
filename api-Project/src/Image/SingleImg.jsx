@@ -1,13 +1,11 @@
 import React from "react";
-import Ak from "./Ak";
+import "./Single.css";
 
-function SingleImg({ rl, key }) {
-  // console.log(rl);
-  const url = rl
+function SingleImg({ url, Qq }) {
   console.log(url);
   return (
-    <div>
-      <Ak url={url} key={key} />
+    <div className="single">
+      <img src={url} alt="" />
     </div>
   );
 }

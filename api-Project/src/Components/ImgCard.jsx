@@ -1,5 +1,5 @@
 import React from "react";
-import SingleImg from "../Image/SingleImg";
+import SingleImg from "../Image/SingleImgData";
 import { NavLink } from "react-router-dom";
 
 function ImgCard({ id, imageUrl, elm,setsingleig,singleig}) {

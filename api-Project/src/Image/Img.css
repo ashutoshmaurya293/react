@@ -23,9 +23,24 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.btn{
+    height: 45px;
+    width: 93px;
+    margin: 20px 0 0 50px;
+    background-color:  #0458ff;
+    color: #fff;
+    border-radius: 5px;
+    border-color: #fff;
+}
+.btn:hover{
+    background-color: #55c2da;
+}
 @media (max-width: 600px) {
     .imgBox img { 
         height: 140px;
         width: 180px;
+    }
+    .btn{
+        margin-bottom: 10px;
     }
 }

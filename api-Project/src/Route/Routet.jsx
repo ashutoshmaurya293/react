@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router";
 import ImageData from "../Image/ImageData";
-import SingleImg from "../Image/SingleImg";
+import SingleImgData from "../Image/SingleImgData";
 
 function Routet() {
   const [first, setfirst] = useState([])
@@ -9,7 +9,7 @@ function Routet() {
     <div>
       <Routes>
         <Route path="/" element={<ImageData />} />
-        <Route path="/single" element={<SingleImg />} />
+        <Route path="/single" element={<SingleImgData />} />
       </Routes>
     </div>
   );

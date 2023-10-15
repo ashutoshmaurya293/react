@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import ImgCard from "../Components/ImgCard";
 import "./Img.css";
-import SingleImg from "./SingleImg";
 import Loader from "../Loader/Loader";
+import SingleImgData from "./SingleImgData";
 
 
 function ImageData() {
@@ -40,10 +40,11 @@ function ImageData() {
   };
   return (
     <div className="box">
+      <button onClick={getImg} className="btn">get</button>
       {singleig.map((im,i) => {
-        return <SingleImg rl={im.download_url} key={i}/>;
+        return <SingleImgData rl={im.download_url} key={i}/>;
       })}
-      <button onClick={getImg}>get</button>
+      
       <div className="imgBox">
         {loading
           ? <Loader/>
