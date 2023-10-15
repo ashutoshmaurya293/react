@@ -4,13 +4,12 @@ import { NavLink } from "react-router-dom";
 
 function ImgCard({ id, imageUrl, elm,setsingleig,singleig}) {
 const redirectToPage= ()=>{
-setsingleig(elm)
-console.log(singleig);
+setsingleig([elm])
+// console.log(singleig);
 }
   return (
     <div>
-     
-
+      
    <img
         src={imageUrl}
         onClick={redirectToPage}

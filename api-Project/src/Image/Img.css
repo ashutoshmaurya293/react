@@ -1,5 +1,6 @@
 .imgBox{
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     min-width: 100%;
     grid-template-columns: repeat(4,200px);
     gap: 10px;
@@ -21,4 +22,10 @@
     object-fit: cover;
     border-radius: 10px;
     cursor: pointer;
+}
+@media (max-width: 600px) {
+    .imgBox img { 
+        height: 140px;
+        width: 180px;
+    }
 }
