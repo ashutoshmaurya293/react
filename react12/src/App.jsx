@@ -1,12 +1,18 @@
 import { useState } from 'react'
 import './App.css'
 import Start from './components/Start'
+import GamePlay from './components/GamePlay'
 
 function App() {
+const [IsGamePlay, setIsGamePlay] = useState(true)
 
+const Gameplay = ()=>{
+  setIsGamePlay((prev)=> !prev)
+
+}
   return (
     <>
-   <Start/>
+   {IsGamePlay? <GamePlay/> : <Start Gameplay={Gameplay}/>}
     </>
   )
 }
