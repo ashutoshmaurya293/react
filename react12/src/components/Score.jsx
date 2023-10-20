@@ -14,7 +14,6 @@ export default Score;
 const Toscore = styled.div`
 max-width: 200px;
 text-align: center;
-background-color: red;
   h1 {
     font-size: 100px;
   }
