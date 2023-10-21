@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-function Score() {
+function Score({UpdateScore}) {
   return (
     <Toscore>
-      <h1>0</h1>
+      <h1>{UpdateScore}</h1>
       <p>Total Score</p>
     </Toscore>
   );

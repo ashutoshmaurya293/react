@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function NumberSelecter() {
-    const [SelecetedNum, setSelecetedNum] = useState()
+function NumberSelecter({
+  setSelecetedNum,SelecetedNum,Error
+}) {
   const arrNum = [1, 2, 3, 4, 5, 6];
   return (
     <NumberSelectorContainer>
+      <p className="Error">{Error}</p>
     <div className="flex">
       {arrNum.map((value, i) => {
         return <Box key={i}
@@ -21,6 +23,12 @@ function NumberSelecter() {
 
 export default NumberSelecter;
 const NumberSelectorContainer = styled.div`
+.Error{
+  font-size: 20px;
+  font-weight: 400;
+  color: red;
+}
+
 margin-top: 75px;
 display: flex;
 flex-direction: column;
