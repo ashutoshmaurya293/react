@@ -4,7 +4,7 @@ import Start from './components/Start'
 import GamePlay from './components/GamePlay'
 
 function App() {
-const [IsGamePlay, setIsGamePlay] = useState(true)
+const [IsGamePlay, setIsGamePlay] = useState(false)
 
 const Gameplay = ()=>{
   setIsGamePlay((prev)=> !prev)

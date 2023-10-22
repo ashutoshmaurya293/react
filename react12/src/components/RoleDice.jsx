@@ -14,7 +14,7 @@ function RoleDice({ CurrentDice, roleDice }) {
 
 export default RoleDice;
 const RDice = styled.div`
-  margin-top: 48px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;

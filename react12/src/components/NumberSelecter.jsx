@@ -29,7 +29,7 @@ const NumberSelectorContainer = styled.div`
   color: red;
 }
 
-margin-top: 75px;
+margin-top: 55px;
 display: flex;
 flex-direction: column;
 align-items: end;
