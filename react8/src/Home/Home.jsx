@@ -8,7 +8,7 @@ function Home({cardData,setcardData}) {
     <>
       <div className="blog">
       {cardData?.map((e,i)=>{
-        return <Card img = {e.img} title = {e.title} desc= {e.desc} id={i} setcardData={setcardData} cardData={cardData}/>
+        return <Card key={i} img = {e.img} title = {e.title} desc= {e.desc} id={i} setcardData={setcardData} cardData={cardData}/>
       })}
       </div>
     </>
