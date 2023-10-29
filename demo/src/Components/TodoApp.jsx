@@ -5,7 +5,7 @@ import Todo from "./Todo";
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
-  
+
   const addTodo = (e) => {
     e.preventDefault();
     if (input) {
@@ -26,9 +26,13 @@ const TodoApp = () => {
   };
   return (
     <>
-    <Input input={input} setInput={setInput} addTodo={addTodo}/>
-    <Todo toggleTodo={toggleTodo} Delete={Delete} todos={todos} input={input} />
-     
+      <Input input={input} setInput={setInput} addTodo={addTodo} />
+      <Todo
+        toggleTodo={toggleTodo}
+        Delete={Delete}
+        todos={todos}
+        input={input}
+      />
     </>
   );
 };

@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-function Input({setInput,input,addTodo}) {
+function Input({ setInput, input, addTodo }) {
   return (
     <div>
-          <form className="flex items-center justify-center mt-10">
+      <form className="flex items-center justify-center mt-10">
         <input
           className="border-2 border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 rounded-md p-2"
           type="text"
@@ -19,7 +19,7 @@ function Input({setInput,input,addTodo}) {
         </button>
       </form>
     </div>
-  )
+  );
 }
 
-export default Input
+export default Input;
