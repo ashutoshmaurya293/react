@@ -9,7 +9,7 @@ const TodoApp = () => {
   const addTodo = (e) => {
     e.preventDefault();
     if (input==0) {
-      alert("Pleace Write Something")
+      alert("Please Write Something")
     }
     else if (input) {
       setTodos([...todos, { text: input, isCompleted: false }]);
