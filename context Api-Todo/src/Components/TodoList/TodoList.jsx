@@ -17,6 +17,7 @@ function TodoList() {
               const updateList = List.map((t) => {
                 if (t.id == todo.id) {
                   todo.finished = isFinished;
+                  console.log(t);
                 }
                 return t;
               });

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Todo({ todoData, isFinished, changeFinished,onDelete,OnEdit }) {
   const [finished, setfinished] = useState(isFinished);
   const [isEdatting, setisEdatting] = useState(false)
-  const [idetText, setidetText] = useState(todoData)
+  const [EditText, setEditText] = useState(todoData)
   return (
     <div>
       <input
@@ -14,10 +14,11 @@ function Todo({ todoData, isFinished, changeFinished,onDelete,OnEdit }) {
           changeFinished(e.target.checked)
           }
          } />
-    {(isEdatting) ? <input type="text" value={idetText} onChange={(e)=>setidetText(e.target.value)} />:todoData}
+    {(isEdatting) ? <input type="text" value={EditText} 
+    onChange={(e)=>setEditText(e.target.value)} />:todoData}
       <button onClick={()=> {
         setisEdatting(!isEdatting)
-        OnEdit(idetText)
+        OnEdit(EditText)
       }}
       
       >{(!isEdatting)? "Edit": "Save" }</button>
