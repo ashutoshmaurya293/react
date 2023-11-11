@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import {RxCross2} from "react-icons/rx"
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -40,12 +41,10 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-
-        {/* 3rd social media links */}
-        <div className="social-media">
+        <div className="icon">
           <div className="hamburger-menu">
             <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
+              {showMediaIcons?<RxCross2/>:<GiHamburgerMenu />}
             </a>
           </div>
         </div>
