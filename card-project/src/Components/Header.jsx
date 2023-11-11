@@ -16,7 +16,7 @@ const Navbar = () => {
           <input type="text" 
           placeholder=" Search..."
           />
-          <BsFillCartCheckFill />
+          <BsFillCartCheckFill className="Cart"/>
         </div>
 
         {/* 2nd menu part  */}

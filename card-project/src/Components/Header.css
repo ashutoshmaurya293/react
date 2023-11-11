@@ -18,12 +18,6 @@ a {
 li {
   list-style: none;
 }
-
-/* 
- 
-
-/* navbar style start  */
-
 .main-nav {
   width: 100%;
   height: 10rem;
@@ -43,9 +37,13 @@ li {
   display: flex;
   justify-content: space-around;
 }
-.logo input{
-  width: 50%;
+.logo input {
+  width: 60%;
   height: 30%;
+}
+.Cart {
+  height: 25%;
+  width: 8%;
 }
 
 .menu-link {
@@ -82,10 +80,6 @@ li {
   transition: 0.5s;
 }
 
-.social-media ul li {
-  font-size: 1.8rem;
-}
-
 .social-media .hamburger-menu {
   display: none;
 }
@@ -94,19 +88,31 @@ li {
 @media (max-width: 998px) {
   .main-nav {
     height: 7rem;
-    /* grid-template-columns: 2rem 2fr 3fr 2rem 2rem; */
-    grid-template-columns: 4fr 1fr 1rem ;
+    grid-template-columns: 4fr 1fr;
+  }
+  .logo {
+    position: absolute;
+  }
+  .social-media .hamburger-menu {
+    margin-right: 15px;
+    margin-top: 5px;
+    display: none;
   }
 
   .menu-link {
     display: none;
   }
-  .logo,
-  .social-media ul {
+  .logo {
     height: 7rem;
+    width: 80%;
+    margin-left: 10px;
   }
   .mobile-menu-link {
     background-color: white;
+    position: absolute;
+    margin-top: 7rem;
+    z-index: 5;
+    width: 500px;
     height: 20rem;
     display: grid;
     grid-column: 2/5;
@@ -152,5 +158,6 @@ li {
   .social-media .hamburger-menu {
     display: block;
     font-size: 2.5rem;
+    z-index: 99;
   }
 }
