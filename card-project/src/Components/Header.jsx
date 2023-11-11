@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
-} from "react-icons/fa";
+import { BsFillCartCheckFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { NavLink } from "react-router-dom";
@@ -17,6 +13,10 @@ const Navbar = () => {
         {/* 1st logo part  */}
         <div className="logo">
           <h2>Logo</h2>
+          <input type="text" 
+          placeholder=" Search..."
+          />
+          <BsFillCartCheckFill />
         </div>
 
         {/* 2nd menu part  */}
@@ -43,25 +43,6 @@ const Navbar = () => {
 
         {/* 3rd social media links */}
         <div className="social-media">
-          <ul className="social-media-desktop">
-            <li>
-              <a>
-                <FaFacebookSquare className="facebook" />
-              </a>
-            </li>
-            <li>
-              <a>
-                <FaInstagramSquare className="instagram" />
-              </a>
-            </li>
-            <li>
-              <a>
-                <FaYoutubeSquare className="youtube" />
-              </a>
-            </li>
-          </ul>
-
-          {/* hamburget menu start  */}
           <div className="hamburger-menu">
             <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
               <GiHamburgerMenu />
