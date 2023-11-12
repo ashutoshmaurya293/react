@@ -4,7 +4,7 @@ import {RxCross2} from "react-icons/rx"
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   let [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -18,7 +18,7 @@ const Navbar = () => {
           <input type="text" 
           placeholder=" Search..."
           />
-          <BsFillCartCheckFill className="Cart"/>
+       <BsFillCartCheckFill className="Cart"/>
         </div>
 
         {/* 2nd menu part  */}
