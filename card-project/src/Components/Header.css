@@ -104,7 +104,7 @@ li {
   }
   .logo {
     height: 7rem;
-    width: 80%;
+    width: 70%;
     margin-left: 10px;
   }
   .mobile-menu-link {
@@ -144,5 +144,10 @@ li {
     display: block;
     font-size: 2rem;
     z-index: 99;
+  }
+  .logo input{
+    height: 25px;
+    width: 90%;
+    margin: 0 15px;
   }
 }
