@@ -1,0 +1,41 @@
+.cart{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.cart main{
+    padding: 2rem;
+    overflow-y: auto;
+}
+.cart h1{
+    color: aquamarine;
+    font: 100 2rem;
+}
+.cart aside{
+    border-radius: 100px 0 0 100px;
+    background-color: blueviolet;
+    color: black;
+     height: 100%;
+     width: 100%;
+     box-shadow: rgba(0,0,0,182);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+.cart aside h2{
+    margin: 1rem;
+    font: 100 1rem ;
+    letter-spacing: 2px;
+}
+.total{
+    font-weight: 800;
+}
+.cardItem{
+    background-color: antiquewhite;
+    width: 100%;
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+}
