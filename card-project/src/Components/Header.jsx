@@ -7,7 +7,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
+  let [showMediaIcons, setShowMediaIcons] = useState(false);
+
   return (
     <>
       <nav className="main-nav">
@@ -26,18 +27,18 @@ const Navbar = () => {
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
           }
         >
-          <ul>
+          <ul onClick={() => setShowMediaIcons(!showMediaIcons)}>
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">about</NavLink>
+              <NavLink to="/about">About</NavLink>
             </li>
             <li>
-              <NavLink to="/service">services</NavLink>
+              <NavLink to="/contact">Contact</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">contact</NavLink>
+              <NavLink to="/login">Login</NavLink>
             </li>
           </ul>
         </div>

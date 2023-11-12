@@ -84,7 +84,6 @@ li {
 .icon .hamburger-menu {
   display: none;
 }
-
 /* responsive css style  */
 @media (max-width: 998px) {
   .main-nav {
