@@ -1,47 +1,76 @@
-.cart{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+.cart {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
-.cart main{
-    padding: 2rem;
-    overflow-y: auto;
+.cart main {
+  padding: 2rem;
+  overflow-y: auto;
 }
-.cart h1{
-    color: aquamarine;
-    font: 100 2rem;
+.cart h1 {
+  color: aquamarine;
+  font: 100 2rem;
 }
-.cart aside{
-    border-radius: 100px 0 0 100px;
-    background-color: blueviolet;
-    color: black;
-     height: 100%;
-     width: 100%;
-     box-shadow: rgba(0,0,0,182);
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+.cart aside {
+  border-radius: 100px 0 0 100px;
+  background-color: blueviolet;
+  color: black;
+  height: 100%;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 182);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.cart aside h2{
-    margin: 1rem;
-    font: 100 1rem ;
-    letter-spacing: 2px;
+.cart aside h2 {
+  margin: 1rem;
+  font: 100 1rem;
+  letter-spacing: 2px;
 }
-.total{
-    font-weight: 800;
+.total {
+  font-weight: 800;
 }
-.cardItem{
-    background-color: antiquewhite;
-    width: 100%;
-    border-radius: 10px;
-    margin: 2rem 0;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 1fr;
-    align-items: center;
+.cardItem {
+  background-color: antiquewhite;
+  width: 100%;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  align-items: center;
 }
-.cardItem img{
-    height: 200px;
-    width: 100%;
-    object-fit: contain;
+.cardItem img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+}
+.button-section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.button-section button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: rgb(0, 200, 255);
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+    background-color: cadetblue;
+  }
+}
+.button-section p {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+}
+.delete-button {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: auto;
+  cursor: pointer;
 }
