@@ -38,4 +38,10 @@
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr 1fr;
+    align-items: center;
+}
+.cardItem img{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
 }

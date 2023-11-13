@@ -1,12 +1,23 @@
 import React from "react";
 import "./Cart.css";
 import { AiFillDelete } from "react-icons/ai";
+const img1 ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXZPbw47gPMdhi7FcnnZkzlhk07Y15td8TdioCwPv6nKfLNm0eATnTmZYqnWC1-6rvZB0&usqp=CAU",
 
 function Cart() {
+
   return (
     <div className="cart">
       <main>
-        <CartItem />
+        <CartItem 
+          imgsrc={img1}
+          name={macbook}
+          price={100000}
+          qty={1}
+          id={
+            "asdfaf"
+          }
+        
+        />
       </main>
       <aside>
         <h2>Subtotal:${2000}</h2>
