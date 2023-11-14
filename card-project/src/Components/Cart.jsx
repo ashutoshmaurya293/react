@@ -15,6 +15,48 @@ function Cart() {
           qty={1}
           id={"asdfaf"}
         />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
+        <CartItem
+          imgsrc={img1}
+          name={"macbook"}
+          price={100000}
+          qty={1}
+          id={"asdfaf"}
+        />
       </main>
       <aside className="total-wala">
         <h2 className="sub">Subtotal:${2000}</h2>
