@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import ProductCart from "./ProductCart";
 import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
 
 function Home() {
   const productList = [
@@ -20,9 +21,11 @@ function Home() {
       id: "ksdfdsj",
     },
   ];
+  const Dispatch = useDispatch()
   const addtoCart = (e) => {
     // console.log(e);
     toast.success("Added to cart")
+    Dispatch ({type:"addToCart",payload:e})
   };
 
   return (
@@ -35,6 +38,7 @@ function Home() {
             name={e.name}
             price={e.price}
             id={e.id}
+            qty={e.qty}
             handler={addtoCart}
           />
         </div>

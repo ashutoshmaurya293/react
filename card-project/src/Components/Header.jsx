@@ -18,7 +18,7 @@ const Navbar = () => {
           <input type="text" 
           placeholder=" Search..."
           />
-      <NavLink to={"/cart"}><BsFillCartCheckFill className="Cart"/></NavLink> 
+      <NavLink to={"/cart"}><BsFillCartCheckFill className="Cart"/><sup className="tt">0</sup></NavLink> 
 
         </div>
 
@@ -27,8 +27,9 @@ const Navbar = () => {
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
           }
-        >
+        > 
           <ul onClick={() => setShowMediaIcons(!showMediaIcons)}>
+           
             <li>
               <NavLink to="/">Home</NavLink>
             </li>

@@ -43,7 +43,7 @@ li {
   height: 30%;
 }
 .Cart {
-  height: 55px;
+  height: 40px;
   width: 22px;
 }
 
@@ -79,6 +79,12 @@ li {
   color: rgba(0, 0, 3, 1);
   text-decoration: underline;
   transition: 0.5s;
+}
+.tt{
+  color: red;
+  font-weight: 800;
+  font-size: 12px;
+  border-radius: 50%;
 }
 
 .icon .hamburger-menu {
@@ -151,7 +157,15 @@ li {
     margin: 0 15px;
   }
   .Cart {
-    height: 40px;
+    height: 20px;
+    margin-top: 15px;
     width: 20px;
+  }
+  .tt{
+    color: red;
+    font-weight: 800;
+    font-size: 12px;
+    border-radius: 50%;
+    margin-left: 20px;
   }
 }
