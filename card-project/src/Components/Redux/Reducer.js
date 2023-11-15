@@ -28,8 +28,16 @@ export const cartReducer = createReducer(
         });
       }
     },
-    deleteHandler:(state,action)=>{
-        state.cartItems = state.cartItems.filter((e)=>e.id!==action.payload)
-    }
+    deleteHandler: (state, action) => {
+      state.cartItems = state.cartItems.filter((e) => e.id !== action.payload);
+    },
+    calculatePrice: (state) => {
+      let sum = 0;
+      state.cartItems.map((e) => (sum += e.price * e.quantit));
+      state.subTotal = sum;
+      state.shiping = state.subTotal > 1000 ? 0 : 200;
+      state.Tax = +(state.subTotal * 0.18).toFixed();
+      state.Total = state.subTotal + state.Tax + state.shiping;
+    },
   }
 );

@@ -5,9 +5,11 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   let [showMediaIcons, setShowMediaIcons] = useState(false);
+  const {cartItems} = useSelector(state=>state.cart)
 
   return (
     <>
@@ -18,7 +20,7 @@ const Navbar = () => {
           <input type="text" 
           placeholder=" Search..."
           />
-      <NavLink to={"/cart"}><BsFillCartCheckFill className="Cart"/><sup className="tt">0</sup></NavLink> 
+      <NavLink to={"/cart"}><BsFillCartCheckFill className="Cart"/><sup className="tt">{cartItems.length}</sup></NavLink> 
 
         </div>
 

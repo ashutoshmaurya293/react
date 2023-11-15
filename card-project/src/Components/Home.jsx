@@ -26,6 +26,7 @@ function Home() {
     // console.log(e);
     toast.success("Added to cart")
     Dispatch ({type:"addToCart",payload:e})
+    Dispatch ({type:"calculatePrice"})
   };
 
   return (
