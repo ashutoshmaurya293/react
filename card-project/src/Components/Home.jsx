@@ -20,13 +20,20 @@ function Home() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7eFMxnxZp3oJC7u00W6w1YnLjS66wscbCP7wfmaZHtG0t1gLZfpTMf101MFuH0Z1GOOU&usqp=CAU",
       id: "ksdfdsj",
     },
+    {
+      name: "redmi",
+      price: 15000,
+      imgsrc:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrpZyIr1R11ls1zakT2PRJ-oJaOXS8HDHOoQ&usqp=CAU",
+      id: "ksdfsdfadfdsj",
+    },
   ];
-  const Dispatch = useDispatch()
+  const Dispatch = useDispatch();
   const addtoCart = (e) => {
     // console.log(e);
-    toast.success("Added to cart")
-    Dispatch ({type:"addToCart",payload:e})
-    Dispatch ({type:"calculatePrice"})
+    toast.success("Added to cart");
+    Dispatch({ type: "addToCart", payload: e });
+    Dispatch({ type: "calculatePrice" });
   };
 
   return (
