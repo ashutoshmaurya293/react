@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import {RxCross2} from "react-icons/rx"
+import { RxCross2 } from "react-icons/rx";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
@@ -9,19 +9,21 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   let [showMediaIcons, setShowMediaIcons] = useState(false);
-  const {cartItems} = useSelector(state=>state.cart)
+  const { cartItems } = useSelector((state) => state.cart);
 
   return (
     <>
       <nav className="main-nav">
         {/* 1st logo part  */}
         <div className="logo">
-          <NavLink to={"/"}><h2>Logo</h2></NavLink>
-          <input type="text" 
-          placeholder=" Search..."
-          />
-      <NavLink to={"/cart"}><BsFillCartCheckFill className="Cart"/><sup className="tt">{cartItems.length}</sup></NavLink> 
-
+          <NavLink to={"/"}>
+            <h2>Logo</h2>
+          </NavLink>
+          <input type="text" placeholder=" Search..." />
+          <NavLink to={"/cart"}>
+            <BsFillCartCheckFill className="Cart" />
+            <sup className="tt">{cartItems.length}</sup>
+          </NavLink>
         </div>
 
         {/* 2nd menu part  */}
@@ -29,9 +31,8 @@ const Navbar = () => {
           className={
             showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
           }
-        > 
+        >
           <ul onClick={() => setShowMediaIcons(!showMediaIcons)}>
-           
             <li>
               <NavLink to="/">Home</NavLink>
             </li>
@@ -49,7 +50,7 @@ const Navbar = () => {
         <div className="icon">
           <div className="hamburger-menu">
             <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              {showMediaIcons?<RxCross2/>:<GiHamburgerMenu />}
+              {showMediaIcons ? <RxCross2 /> : <GiHamburgerMenu />}
             </a>
           </div>
         </div>
