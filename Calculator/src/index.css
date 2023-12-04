@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .heading{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 2rem;
+    font-size: 3rem;
+    font-family: Open Sans;
+ }

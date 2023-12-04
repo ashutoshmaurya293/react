@@ -1,13 +1,14 @@
 import React from "react";
+import './index.css'
+import Calculator from "./components/Calculator";
 
-export const App = () => {
-  const arrNum = [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+const App = () => {
   return (
     <div>
-      {arrNum.map((e, i) => {
-        return <button>{e}</button>;
-      })}
+   <h1 className="heading">   Calculator</h1>
+      <Calculator />
     </div>
   );
 };
-export default App
+
+export default App;
