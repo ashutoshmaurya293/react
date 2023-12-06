@@ -1,64 +1,80 @@
 import React, { useState } from "react";
-import "./App.css"
+import "./App.css";
 
 const Calculator = () => {
-  const [current, setcurrent] = useState("")
-  const [previous, setprevious] = useState("")
-  const [simble, setsimble] = useState("")
-  const deleteHandler= ()=>{
-setcurrent(String(current).slice(0,-1))
-  }
+  const [current, setcurrent] = useState("");
+  const [previous, setprevious] = useState("");
+  const [simble, setsimble] = useState("");
+  const deleteHandler = () => {
+    setcurrent(String(current).slice(0, -1));
+  };
   const allclearHandler = () => {
-    setcurrent("")
-    setprevious("")
-    setsimble("")
-  }
-  const chooseOperationHandler  = (e) => {
-    if(current === "")return
-    if(!previous == ""){
-      let ansValue = ans()
-      setcurrent(ansValue)
-    }else{
-      setprevious(current)
+    setcurrent("");
+    setprevious("");
+    setsimble("");
+  };
+  const chooseOperationHandler = (e) => {
+    if (current === "") return;
+    if (previous !== "") {
+      let value = ans();
+      setprevious(value);
+    } else {
+      setprevious(current);
     }
-    setcurrent("")
-    setsimble(e.target.getAttribute("data"))
-  }
-  const ans = ()=>{
-    console.log("answer");
-  }
-  const equalHandler    = () => {
-    let value = ans()
-    if(value === undefined || value ===null)return
-    setcurrent(value)
-    setprevious("")
-    setsimble("")
-  }
+    setcurrent("");
+    setsimble(e.target.getAttribute("data"));
+  };
+  const ans = () => {
+    let result;
+    let priviousNum = parseFloat(previous);
+    let currentNum = parseFloat(current);
+    if (isNaN(priviousNum) || isNaN(currentNum)) return;
+    switch (simble) {
+      case "÷":
+        result = priviousNum / currentNum;
+        break;
+      case "+":
+        result = priviousNum + currentNum;
+        break;
+      case "-":
+        result = priviousNum - currentNum;
+        break;
+      case "x":
+        result = priviousNum * currentNum;
+        break;
+    }
+    return result;
+  };
+  const equalHandler = () => {
+    let value = ans();
+    if (value === undefined || value === null) return;
+    setcurrent(value);
+    setprevious("");
+    setsimble("");
+  };
   const appendValueHandler = (e) => {
-    let value = e.target.getAttribute("data")
-    if (value === "."&& current.includes("."))return
+    let value = e.target.getAttribute("data");
+    if (value === "." && current.includes(".")) return;
     // console.log(value);
-    setcurrent(current+value)
-   
-  }
+    setcurrent(current + value);
+  };
   return (
     <>
       <div className="Container">
         <div className="screen">
-          <div className="Prevoius">{previous}{simble}</div>
+          <div className="Prevoius">
+            {previous}
+            {simble}
+          </div>
           <div className="current">{current}</div>
         </div>
-        <button
-      
-          className="button" id="width"
-          onClick={allclearHandler}
-        >
+        <button className="button" id="width" onClick={allclearHandler}>
           AC
         </button>
         <button className="button" onClick={deleteHandler}>
           DEL
         </button>
-        <button data={"÷"} onClick={chooseOperationHandler} >
+        <button data={"÷"} onClick={chooseOperationHandler}>
           ÷
         </button>
         <button className="button" data={7} onClick={appendValueHandler}>
@@ -71,12 +87,7 @@ setcurrent(String(current).slice(0,-1))
           {" "}
           9
         </button>
-        <button
-          className="button"
-          data={"x"}
-          
-          onClick={chooseOperationHandler}
-        >
+        <button className="button" data={"x"} onClick={chooseOperationHandler}>
           x
         </button>
         <button className="button" data={4} onClick={appendValueHandler}>
@@ -88,12 +99,7 @@ setcurrent(String(current).slice(0,-1))
         <button className="button" data={6} onClick={appendValueHandler}>
           6
         </button>
-        <button
-          className="button"
-          data={"+"}
-
-          onClick={chooseOperationHandler}
-        >
+        <button className="button" data={"+"} onClick={chooseOperationHandler}>
           +
         </button>
         <button className="button" data={1} onClick={appendValueHandler}>
@@ -105,20 +111,10 @@ setcurrent(String(current).slice(0,-1))
         <button className="button" data={3} onClick={appendValueHandler}>
           3
         </button>
-        <button
-          className="button"
-          data={"-"}
-
-          onClick={chooseOperationHandler}
-        >
+        <button className="button" data={"-"} onClick={chooseOperationHandler}>
           -
         </button>
-        <button
-          className="button"
-          data={"."}
-          onClick={appendValueHandler}
-          
-        >
+        <button className="button" data={"."} onClick={appendValueHandler}>
           .
         </button>
         <button className="button" data={0} onClick={appendValueHandler}>
