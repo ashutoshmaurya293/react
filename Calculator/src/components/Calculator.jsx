@@ -1,20 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css"
 
 const Calculator = () => {
+  const [current, setcurrent] = useState("")
+  const [previous, setprevious] = useState("")
+  const [simble, setsimble] = useState("")
   const deleteHandler= ()=>{
-
+setcurrent(String(current).slice(0,-1))
   }
-  const allclearHandler = () => {}
-  const chooseOperationHandler  = () => {}
-  const equalHandler    = () => {}
-  const appendValueHandler   = () => {}
+  const allclearHandler = () => {
+    setcurrent("")
+    setprevious("")
+    setsimble("")
+  }
+  const chooseOperationHandler  = (e) => {
+    if(current === "")return
+    if(!previous == ""){
+      let ansValue = ans()
+      setcurrent(ansValue)
+    }else{
+      setprevious(current)
+    }
+    setcurrent("")
+    setsimble(e.target.getAttribute("data"))
+  }
+  const ans = ()=>{
+    console.log("answer");
+  }
+  const equalHandler    = () => {
+    let value = ans()
+    if(value === undefined || value ===null)return
+    setcurrent(value)
+    setprevious("")
+    setsimble("")
+  }
+  const appendValueHandler = (e) => {
+    let value = e.target.getAttribute("data")
+    if (value === "."&& current.includes("."))return
+    // console.log(value);
+    setcurrent(current+value)
+   
+  }
   return (
     <>
       <div className="Container">
         <div className="screen">
-          <div className="Prevoius">somethig Prevoius</div>
-          <div className="current">curre4nt</div>
+          <div className="Prevoius">{previous}{simble}</div>
+          <div className="current">{current}</div>
         </div>
         <button
       
