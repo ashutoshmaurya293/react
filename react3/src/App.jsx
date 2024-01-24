@@ -8,23 +8,22 @@ function App() {
 
   const passwordRef = useRef(null);
 
-  const paswardGenerater = useCallback(() => {
+  useEffect(() => {
     let pas = "";
     let string = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm";
     if (numberAllowed) string += "0123456789";
     if (charAllowed) string += "!@#$%^&*()";
     for (let i = 1; i <= length; i++) {
       let Char = Math.floor(Math.random() * string.length + 1);
+      // console.log(Char);
       pas += string.charAt(Char);
     }
     setpassword(pas);
+
   }, [length, numberAllowed, charAllowed]);
-  const copyPasswardToClipboard = useCallback(() => {
+  const copyPasswardToClipboard = () => {
     window.navigator.clipboard.writeText(password);
-  }, [password]);
-  useEffect(() => {
-    paswardGenerater();
-  }, [length, numberAllowed, charAllowed, paswardGenerater]);
+  };
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800 text-orange-500">
