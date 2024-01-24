@@ -4,7 +4,7 @@ import useCurrencyInfo from "./hookes/useCurrencyinfo";
 import "./App.css";
 
 function App() {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
@@ -25,7 +25,7 @@ function App() {
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('https://media.gettyimages.com/id/1358927461/photo/currency-and-exchange-stock-chart-for-finance-and-economy-display.jpg?s=612x612&w=gi&k=20&c=03bx1AUczl4sYNImevwHShJCo6gnk9dv45WUHSGXXA4=')`,
+        backgroundImage: `url(https://th.bing.com/th/id/OIP._81pqPFAp_wgMHbqyf7JeQHaE8?rs=1&pid=ImgDetMain)`,
       }}
     >
       <div className="w-full">
@@ -41,7 +41,7 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOptions={options}
-                onCurrencyChange={(currency) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
                 onAmountChange={(amount) => setAmount(amount)}
               />
@@ -61,7 +61,7 @@ function App() {
                 amount={convertedAmount}
                 currencyOptions={options}
                 onCurrencyChange={(currency) => setTo(currency)}
-                selectCurrency={from}
+                selectCurrency={to}
                 amountDisable
               />
             </div>
