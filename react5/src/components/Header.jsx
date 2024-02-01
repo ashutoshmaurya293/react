@@ -14,29 +14,35 @@ const NavigationBar = () => {
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-10">
           <div className="flex-shrink-0">
-            <span className="text-white text-2xl">Logo</span>
+           <NavLink to={"/"}>
+           <span className="text-white text-2xl cursor-pointer">Logo</span>
+           </NavLink>
           </div>
           <div className="hidden sm:block">
-            <a
-              href="#"
+            <NavLink
+              to={"/"}
               className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               Home
-            </a>
-            <NavLink to={"/about"}  className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-             
-                About
-
             </NavLink>
-           <NavLink to={"/contect"} className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-            
+            <NavLink
+              to={"/about"}
+              className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
+              About
+            </NavLink>
+            <NavLink
+              to={"/contect"}
+              className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
               Contact
-           </NavLink>
-        <NavLink to={"/login"}  className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-
+            </NavLink>
+            <NavLink
+              to={"/login"}
+              className="text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+            >
               Login
-        </NavLink>
-            
+            </NavLink>
           </div>
           <div className="block sm:hidden">
             <button
@@ -48,31 +54,31 @@ const NavigationBar = () => {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="sm:hidden">
-            <a
-              href="#"
+          <div className="sm:hidden" onClick={toggleMenu}>
+            <NavLink
+            to={"/"}
               className="block text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-base font-medium"
             >
               Home
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+            to={"/about"}
               className="block text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-base font-medium"
             >
               About
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to={"/contect"}
               className="block text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-base font-medium"
             >
-              Services
-            </a>
-            <a
-              href="#"
+             Contect
+            </NavLink>
+            <NavLink
+              to={"/login"}
               className="block text-gray-300 hover:bg-orange-500 hover:text-white px-3 py-2 rounded-md text-base font-medium"
             >
-              Contact
-            </a>
+              Login
+            </NavLink>
           </div>
         )}
       </div>
