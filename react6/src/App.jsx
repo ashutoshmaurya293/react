@@ -7,6 +7,7 @@ function App() {
 
   return (
     <>
+    <h1 className='h1'>Tic Tak Toe</h1>
 <Grid numberOfCards={9} />
     </>
   )

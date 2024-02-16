@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   console.log(Date.now());
-  const [color, setColor] = useState("red")
+  const [color, setColor] = useState("white")
   return (
   <div className='div'style={{backgroundColor:color}}>
 <button className='a' onClick={ ()=> setColor("red")}>
