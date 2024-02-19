@@ -5,8 +5,18 @@
 
 .h1 {
   font-family: Roboto;
-  color: black;
+  color: #fff;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: #6f07f6;
+  width: 45%;
+  margin: 0 auto;
   text-align: center;
   text-transform: uppercase;
   margin-top: 20px;
+}
+@media (max-width: 768px) {
+  h1 {
+    padding: 0.8rem;
+  }
 }
