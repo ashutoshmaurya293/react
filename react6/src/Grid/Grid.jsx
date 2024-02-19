@@ -31,7 +31,7 @@ function Grid({ numberOfCards }) {
           <button onClick={reset}>Reset</button>
         </div>
       )}
-      <h2 className="turn-highlight">Current turn :{turn ? "O" : "X"}</h2>
+      <h2 className="turn-highlight">Current turn : {turn ? "O" : "X"}</h2>
       <div className="grid">
         {board.map((el, idx) => (
           <Card
