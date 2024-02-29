@@ -1,8 +1,8 @@
 
-## Todo App
+# Todo App
 This Todo App is a responsive web application built using React.js, Tailwind CSS, JavaScript, localStorage, and Context API. It offers seamless task management with features like adding, removing, editing, and toggling todos.
 
-## Features
+# Features
 Responsive Design: The app is designed to work flawlessly across various devices and screen sizes.
 Add Todo: Easily add new todos to your list.
 Remove Todo: Remove unwanted todos with a simple click.
