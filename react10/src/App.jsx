@@ -23,10 +23,10 @@ function App() {
 
   const toggleComplet = (id) => {
     setTodos((prev) =>
-      prev.map((prevTdod) =>
-        prevTdod.id == id
-          ? { ...prevTdod, completed: !prevTdod.completed }
-          : prevTdod
+      prev.map((prevTodo) =>
+        prevTodo.id == id
+          ? { ...prevTodo, completed: !prevTodo.completed }
+          : prevTodo
       )
     );
   };
